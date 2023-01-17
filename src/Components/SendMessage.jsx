@@ -12,6 +12,8 @@ const Contactlist = () => {
     const [messageValue, setMessageValue] = useState('');
     const { number } = useParams();
 
+    const URL = process.env.REACT_APP_API_URL;
+
     /**Generate random OTP */
     useEffect(() => {
         const numberOtp = Math.floor(100000 + Math.random() * 900000);
@@ -23,7 +25,7 @@ const Contactlist = () => {
             to: number,
             body: `${messageValue} and Your OTP is: ${otp}`
         }
-        await fetch('/api/messages', {
+        await fetch(`${URL}/api/messages`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

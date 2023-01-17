@@ -6,13 +6,16 @@ import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Link } from "react-router-dom";
 
+
 const MessageHistory = () => {
     const [logs, setLogs] = useState(false);
+
+    const URL = process.env.REACT_APP_API_URL;
 
     /**Call api twilio log */
     const messageLogs = async () => {
         try {
-            await fetch('/api/messagesList', {
+            await fetch(`${URL}/api/messagesList`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
