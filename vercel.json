@@ -1,6 +1,6 @@
 {
-    "routes": [
-     { "source": "/api/(.*)", "destination": "/server" },
-      { "source": "/(.*)", "destination": "/index.html" }
+    "rewrites": [
+        { "source": "/api/(.*)", "destination": "/server" },
+        { "source": "/(.*)", "destination": "/build/index.html" }
     ]
 }
