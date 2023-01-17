@@ -1,22 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ContactList from "./Components/ContactList";
+import ContactInfo from "./Components/ContactInfo";
+import SendMessage from "./Components/SendMessage";
+import MessageHistory from "./Components/MessageHistory";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Router>
+          <Routes>
+            <Route path="/" element={<ContactList />} />
+            <Route path="/contact/:id" element={<ContactInfo />} />
+            <Route path="/send-message/:number" element={<SendMessage />} />
+            <Route path="/message-history" element={<MessageHistory />} />
+          </Routes>
+        </Router>
       </header>
     </div>
   );

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "firstName": "Maki",
+        "lastName": "Zenin",
+        "phoneNumber": "+919620753606"
+    },
+    {
+        "id": "2",
+        "firstName": "Yuki",
+        "lastName": "Soma",
+        "phoneNumber": "+919901710510"
+    },
+    {
+        "id": "3",
+        "firstName": "Yor",
+        "lastName": "Forger",
+        "phoneNumber": "+919620753606"
+    },
+    {
+        "id": "4",
+        "firstName": "Test",
+        "lastName": "Project",
+        "phoneNumber": "+919810153260"
+    },
+    {
+        "id": "5",
+        "firstName": "Test",
+        "lastName": "Number 2",
+        "phoneNumber": "+919810153260"
+    }
+]
