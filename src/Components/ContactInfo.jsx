@@ -5,8 +5,9 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import CONTACTS from "../JSONFiles/Contacts.json";
 import ViewMessageLogs from "./Footer";
+import { Link } from "react-router-dom";
 
-const Contactlist = () => {
+const ContactInfo = () => {
     const [contactInfo, setContactInfo] = useState(false);
     const [isSendMsg, setIsSendMsg] = useState(0);
     const { id } = useParams();
@@ -39,10 +40,15 @@ const Contactlist = () => {
                 </>
             }
             <br />
-            <ViewMessageLogs />
+            <ViewMessageLogs /><br />
+            <Link to="/" style={{ color: "white", margin: "20px" }}>
+                <Typography variant="h6" component="div">
+                    Home
+                </Typography>
+            </Link>
 
         </div>
     )
 }
 
-export default Contactlist;
+export default ContactInfo;

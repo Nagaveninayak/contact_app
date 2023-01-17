@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import ViewMessageLogs from "./Footer";
-
+import { Link } from "react-router-dom";
 
 const Contactlist = () => {
     const [otp, setOtp] = useState('');
@@ -64,7 +64,12 @@ const Contactlist = () => {
                     Send Message
                 </Button>
             </Box>
-            <ViewMessageLogs />
+            <ViewMessageLogs /><br />
+            <Link to="/" style={{ color: "white", margin: "20px" }}>
+                <Typography variant="h6" component="div">
+                    Home
+                </Typography>
+            </Link>
         </div>
     )
 }

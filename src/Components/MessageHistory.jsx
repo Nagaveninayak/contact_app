@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
+import { Link } from "react-router-dom";
 
 const MessageHistory = () => {
     const [logs, setLogs] = useState(false);
@@ -29,8 +30,6 @@ const MessageHistory = () => {
     useEffect(() => {
         messageLogs();
     }, [])
-
-    console.log('state', logs)
 
     return (
         <div>
@@ -65,6 +64,11 @@ const MessageHistory = () => {
                     }) :
                     <CircularProgress color="inherit" />
             }
+            <Link to="/" style={{ color: "white", margin: "20px" }}>
+                <Typography variant="h6" component="div">
+                    Home
+                </Typography>
+            </Link>
         </div>
     )
 }
